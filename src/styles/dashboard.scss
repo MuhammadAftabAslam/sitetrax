@@ -1,0 +1,151 @@
+@import './variables';
+
+.dashboard-page {
+  .sidebar {
+    background-color: #313131;
+    height: 100vh;
+    position: fixed;
+    width: 90px;
+
+    .sidebar-icon-wrapper {
+      text-align: center;
+      padding: 1em;
+
+      &:hover {
+        border-left: solid 3px $mainColor;
+        padding-left: calc(1em - 3px);
+        cursor: pointer;
+
+        .sidebar-icon {
+          color: $mainColor;
+        }
+      }
+
+      .sidebar-icon-label {
+        color: white;
+        font-size: 0.75em;
+        margin: 0.75em 0 0;
+      }
+      .sidebar-icon-image {
+        background-size: contain;
+        height: 50px;
+        width: 50px;
+        margin: 0 auto;
+      }
+      .sidebar-icon {
+        font-size: 2.5em;
+        margin: 0 auto; 
+      }
+      .sidebar-profile-image {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .main-container {
+    margin-left: 90px;
+    min-height: 100vh;
+    padding: 1em;
+    background-color: $lightgray;
+    width: 94%;
+
+    .recipe-container-wrapper {
+      padding: 1em;
+      
+      .recipe-container {
+        height: 600px;
+        background-color: white;
+        box-shadow: 10px 10px 40px -30px rgba(0,0,0,0.75);
+        padding: 0;
+        overflow: auto;
+
+        .recipe-container-header {
+          padding: 0.85em;
+          background-color: $mainColor;
+          color: white;
+          font-weight: 500;
+          font-size: 1.1em;
+        }
+
+        .recipe-container-label {
+          margin-bottom: -0.5em;
+          padding: 0.5em 1em 0 1em;
+        }
+
+        .image-thumbnail-wrappers-container {
+          padding: 1em;
+          .image-thumbnail-wrapper {
+            padding: 0.5em;
+            &.selected {
+              background-color: $mainColor;
+              border-radius: 7px;
+            }
+            .image-thumbnail {
+              border-radius: 7px;
+              background-size: cover;
+              height: 100px;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+
+        .option-thumbnail-wrappers-container {
+          padding: 1.5em 0em 0.5em;
+          .option-thumbnail-wrapper {
+            padding: 0.5em;
+            display: table;
+            float: none;
+            border-radius: 7px;
+            margin-bottom: 0.25em;
+            border-width: 1px;
+            border-style: solid;
+            &.selected {
+              background-color: $mainColor;
+              border-radius: 7px;
+            }
+            .option-thumbnail {
+              padding: 0;
+              display: table-row;
+              float: none;
+              .option-thumbnail-text-wrapper {
+                padding: 0.5em 1em;
+                display: table-cell;
+                float: none;
+                vertical-align: middle;
+                width: 83%;
+                .option-thumbnail-title {
+                  display: block;
+                  text-transform: uppercase;
+                  margin-bottom: 0.5em;
+                  font-weight: 500;
+                }
+                .option-thumbnail-description {
+                  font-size: .90em;
+                }
+              }
+              .option-thumbnail-image-wrapper {
+                display: table-cell;
+                float: none;
+                vertical-align: middle;
+                width: 17%;
+                padding: 0.5em;
+              }
+              .option-thumbnail-image {
+                font-size: 2.25em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dashboard-actions-wrapper {
+      .create-recipe-button {
+        margin: 0 auto;
+        display: block;
+        background-color: $mainColor;
+        color: white;
+      }
+    }
+  }
+}
